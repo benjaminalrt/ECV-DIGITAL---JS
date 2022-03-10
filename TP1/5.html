@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Profil - Benjamin Alerte</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/build/app.30ba704a.css">
+
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+        function onSubmit(token) {
+            document.getElementById("contact-form").submit();
+        }
+    </script>
+    <script src="/build/runtime.32edc313.js" defer></script>
+    <script src="/build/154.b2544a58.js" defer></script>
+    <script src="/build/app.94f6c352.js" defer></script>
+</head>
+
+<body>
+    <header class="uk-box-shadow-large">
+        <div class="uk-section uk-section-secondary uk-section-small">
+            <div class="uk-container uk-margin-top">
+                <h1 class="uk-margin-remove uk-animation-slide-left uk-text-center uk-text-left@s">BENJAMIN <span
+                        class="uk-text-muted">ALERTE</span></h1>
+                <h3 class="uk-text-muted uk-margin-remove uk-animation-slide-left uk-text-center uk-text-left@s">
+                    DÉVELOPPEUR WEB</h3>
+
+                <div class="uk-flex-between" uk-grid>
+                    <div class="uk-margin-medium-top uk-animation-slide-left uk-margin-auto uk-margin-remove-left@s"
+                        style="margin-bottom: -150px">
+                        <div class="uk-background-primary uk-box-shadow-large"
+                            style="width: 256px; height: 256px; border: 2px white solid">
+                            <img uk-img width="256" height="256" data-src="/uploads/images/myportrait.jpg"
+                                class="uk-height-1-1 uk-width-1-1" style="object-fit: cover" />
+                        </div>
+                        <div class="uk-margin-xlarge-top uk-margin-large-bottom uk-hidden@s">
+                            &nbsp;
+                        </div>
+                    </div>
+                    <div
+                        class="uk-margin-medium-top uk-width-1-1 uk-width-1-2@s uk-width-1-3@m uk-animation-slide-right">
+                        <div class="uk-flex-middle" uk-grid>
+                            <div class="uk-width-1-6@s uk-width-1-1 uk-flex uk-flex-center"><span class="uk-text-white"
+                                    uk-icon="icon: receiver; ratio: 2"></span></div>
+                            <div class="uk-width-5-6@s uk-width-1-1 uk-text-center uk-text-left@s">
+                                <h5 class="uk-margin-remove uk-text-bold">Téléphone</h5>
+                                <a class="uk-text-small" href="tel:0612137356">06 12 13 73 56</a>
+                                <hr style="border-color: white;"
+                                    class="uk-margin-auto-left uk-margin-small-top uk-width-3-4 uk-width-1-1@s uk-margin-auto">
+                            </div>
+
+                            <div class="uk-width-1-6@s uk-width-1-1 uk-flex uk-flex-center uk-margin-small-top"><span
+                                    class="uk-text-white" uk-icon="icon: mail; ratio: 2"></span></div>
+                            <div class="uk-width-5-6@s uk-width-1-1 uk-text-center uk-text-left@s uk-margin-small-top">
+                                <h5 class="uk-margin-remove uk-text-bold">Email</h5>
+                                <a class="uk-text-small"
+                                    href="mailto:contact@benjaminalerte.fr">contact@benjaminalerte.fr</a>
+                                <hr style="border-color: white;"
+                                    class="uk-margin-auto-left uk-margin-small-top uk-width-3-4 uk-width-1-1@s uk-margin-auto">
+                            </div>
+
+                            <div class="uk-width-1-6@s uk-width-1-1 uk-flex uk-flex-center uk-margin-small-top"><span
+                                    class="uk-text-white" uk-icon="icon: location; ratio: 2"></span></div>
+                            <div class="uk-width-5-6@s uk-width-1-1 uk-text-center uk-text-left@s uk-margin-small-top">
+                                <h5 class="uk-margin-remove uk-text-bold">Adresse</h5>
+                                <span class="uk-text-small uk-text-white">30 Boulevard Hanauer, 67500 Haguenau</span>
+                                <hr style="border-color: white;"
+                                    class="uk-margin-auto-left uk-margin-small-top uk-width-3-4 uk-width-1-1@s uk-margin-auto">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="uk-section uk-animation-fade" uk-height-viewport="expand: true">
+        <div class="uk-container">
+            <div class="uk-flex uk-flex-right uk-flex-top">
+                <ul id="page-nav" class="uk-subnav uk-subnav-pill uk-flex-center uk-flex-left@s"
+                    uk-switcher="connect : #page-switcher; animation: uk-animation-fade">
+                    <li data-index="0" class=""><a data-controller="tab" data-target="tab-home" href="#">Accueil</a>
+                    </li>
+                    <li data-index="1" class="uk-active"><a data-controller="tab" data-target="tab-profil"
+                            href="#">Profil</a></li>
+                    <li data-index="2" class=""><a data-controller="tab" data-target="tab-realisations"
+                            href="#">Réalisations</a></li>
+                    <li data-index="3" class=""><a data-controller="tab" data-target="tab-contact"
+                            href="#">Contactez-moi !</a></li>
+                    <li data-index="4" class=""><a data-controller="tab" data-target="tab-cv" href="#">Mon CV</a></li>
+                </ul>
+            </div>
+            <ul class="uk-switcher uk-margin" id="page-switcher">
+                <li class="">
+                    <div>
+                        <h2 class="uk-text-center uk-text-left@s">Bonjour cher visiteur !</h2>
+                        <h3 class="uk-text-center uk-text-left@s">Bienvenue sur mon site internet ! C'est avec plaisir
+                            que je vous invite à découvrir mon profil, mon parcours et mes réalisations.</h3>
+                        <div class="uk-child-width-1-2@s uk-child-width-1-1 uk-margin-large-top" uk-grid>
+                            <div>
+                                <div class="uk-card uk-card-small uk-card-secondary">
+                                    <a data-controller="tab" data-target="tab-profil" href="#" uk-switcher-item="1">
+                                        <div class="uk-card-body uk-flex uk-flex-around uk-flex-middle">
+                                            <span class="uk-visible@s uk-text-white"
+                                                uk-icon="icon: arrow-right; ratio: 2"></span>
+                                            <h4 class="uk-text-center uk-margin-remove">Découvrir mon profil</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="uk-card uk-card-small uk-card-secondary">
+                                    <a data-controller="tab" data-target="tab-realisations" href="#"
+                                        uk-switcher-item="2">
+                                        <div class="uk-card-body uk-flex uk-flex-around uk-flex-middle">
+                                            <span class="uk-visible@s uk-text-white"
+                                                uk-icon="icon: arrow-right; ratio: 2"></span>
+                                            <h4 class="uk-text-center uk-margin-remove">Découvrir mes réalisations</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="uk-active">
+                    <div>
+                        <h2 class="uk-text-center uk-text-left@s">Mon profil</h2>
+
+                        <div class="uk-width-1-1 uk-margin-medium">
+                            <h3 class="uk-text-bold uk-heading-line uk-text-center uk-text-left@s"><span>Qui suis-je
+                                    ?</span></h3>
+
+                            <p class="uk-text-center uk-text-left@s">Je m'appelle <b>Benjamin</b>, j'ai <b>24 ans</b>,
+                                et je suis actuellement développeur et intégrateur Web chez <b>wiwacom</b>.<br><br>
+                                <b>Ce que j'aime, c'est réfléchir :</b> c'est affronter des problèmes, trouver des
+                                solutions, dans une démarche de recherche, tout en essayant d'apprendre quelque
+                                chose.<br><br>
+                                C'est pourquoi j'ai fait, après obtention de mon bac, deux ans en licence de
+                                Mathématiques. J'ai adoré, mais je ne voyais pas quoi faire ensuite. J'ai alors
+                                découvert les joies de la <b>programmation,</b> appliquée dans le web. Le rapport entre
+                                les Mathématiques et la programmation, c'est la réflexion algorithimique, et <b>c'est ce
+                                    qui me passionne.</b><br><br>
+                                Je me suis alors dirigé vers la <b>licence professionnelle de développement web</b>, à
+                                l'IUT de Haguenau.
+                            </p>
+                        </div>
+
+                        <div class="uk-width-1-1 uk-margin-medium">
+                            <h3 class="uk-text-bold uk-heading-line uk-text-center uk-text-left@s"><span>Mon
+                                    projet</span></h3>
+
+                            <p class="uk-text-center uk-text-left@s">Une fois mon <b>bac+3 validé</b>, j'ai continué en
+                                CDI à wiwacom, l'entreprise où j'ai fait mon alternance pendant la licence
+                                professionnelle.<br>
+                                Cependant, ma <b>soif d'apprendre de nouvelles choses</b> n'a pas été apaisée : j'ai
+                                donc pour projet d'intégrer un <b>Master en Développement web et mobile.</b></p>
+                        </div>
+
+                        <div class="uk-width-1-1 uk-margin-medium">
+                            <h3 class="uk-text-bold uk-heading-line uk-text-center uk-text-left@s"><span>Mes compétences
+                                    web</span></h3>
+
+                            <ul class="uk-list">
+                                <li class="uk-text-center uk-text-left@s"><b>Langages de programmation :</b><br
+                                        class="uk-hidden@s">
+                                    <span class="uk-label uk-margin-left">HTML 5</span>
+                                    <span class="uk-label uk-margin-left">CSS 3</span>
+                                    <span class="uk-label uk-margin-left uk-position-relative">JS<span
+                                            class="uk-position-absolute heart-marker" uk-icon="heart"></span></span>
+                                    <span class="uk-label uk-margin-left uk-position-relative">PHP 7<span
+                                            class="uk-position-absolute heart-marker" uk-icon="heart"></span></span>
+                                    <span class="uk-label uk-margin-left">TS</span>
+                                    <span class="uk-label uk-margin-left">SCSS</span>
+                                </li>
+
+                                <li class="uk-text-center uk-text-left@s uk-margin-top uk-margin-remove-top@s">
+                                    <b>Technologies web :</b><br class="uk-hidden@s">
+                                    <span class="uk-label uk-margin-left uk-position-relative">MVC<span
+                                            class="uk-position-absolute heart-marker" uk-icon="heart"></span></span>
+                                    <span class="uk-label uk-margin-left uk-position-relative">Symfony<span
+                                            class="uk-position-absolute heart-marker" uk-icon="heart"></span></span>
+                                    <span class="uk-label uk-margin-left uk-position-relative">React JS<span
+                                            class="uk-position-absolute heart-marker" uk-icon="heart"></span></span>
+                                    <span class="uk-label uk-margin-left">Wordpress</span>
+                                    <span class="uk-label uk-margin-left">Node JS</span>
+                                    <span class="uk-label uk-margin-left">Bootstrap 4 & 5</span>
+                                    <span class="uk-label uk-margin-left uk-position-relative">UIkit 3<span
+                                            class="uk-position-absolute heart-marker" uk-icon="heart"></span></span>
+                                </li>
+
+                                <h4 class="uk-margin-medium-top uk-text-center uk-text-left@s">Les technologies marquées
+                                    par un <span class="heart-marker" uk-icon="heart"></span> sont celles que j'utilise
+                                    le mieux, et qui me plaisent le plus.</h4>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="">
+                    <div>
+                        <h2 class="uk-text-center uk-text-left@s">Mes réalisations</h2>
+                        <h5 class="uk-text-center uk-text-left@s">Voici une <b>sélection de réalisations</b> qui
+                            représentent au mieux mon <b>profil de développeur web</b>.</h5>
+
+                        <div class="uk-margin-medium-top" uk-filter="target: .realisations-filter">
+
+                            <div class="uk-grid-small uk-grid-divider uk-child-width-auto uk-flex-center uk-flex-left@s"
+                                uk-grid>
+                                <div>
+                                    <ul class="uk-subnav uk-subnav-pill" uk-margin>
+                                        <li class="uk-active" uk-filter-control><a href="#">Toutes</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul class="uk-subnav uk-subnav-pill" uk-margin>
+                                        <li uk-filter-control="filter :[data-type='wysiwyg']; group : type"><a
+                                                href="#">Applications WYSIWYG</a></li>
+                                        <li uk-filter-control="filter :[data-type='game']; group : type"><a
+                                                href="#">Jeux Web</a></li>
+                                        <li uk-filter-control="filter :[data-type='webapp']; group : type"><a
+                                                href="#">Fonctionnalités Web</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul class="uk-subnav uk-subnav-pill" uk-margin>
+                                        <li uk-filter-control="filter : [data-php='true']; group : type"><a
+                                                href="#">PHP</a></li>
+                                        <li uk-filter-control="filter : [data-react='true']; group : type"><a
+                                                href="#">React Js</a></li>
+                                        <li uk-filter-control="filter : [data-vanillajs='true']; group : type"><a
+                                                href="#">Vanilla Js</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <ul class="realisations-filter uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@l uk-grid-match"
+                                uk-grid>
+                                <li data-vanillajs="true" data-type="webapp">
+                                    <div class="uk-card uk-card-default uk-animation-slide-right"
+                                        style="animation-delay: 0s;">
+                                        <div class="uk-card-header uk-background-secondary">
+                                            <h3 class="uk-card-title uk-text-center uk-text-white">Carte Intéractive
+                                            </h3>
+                                        </div>
+                                        <div class="uk-card-media-top uk-card-header uk-padding-remove">
+
+                                            <div class="uk-position-relative" tabindex="-1" uk-slideshow>
+                                                <ul class="uk-slideshow-items" uk-lightbox>
+                                                    <li>
+                                                        <a href="/uploads/realisations/3-1.png"><img uk-img
+                                                                data-src="/uploads/realisations/3-1.png" alt=""
+                                                                uk-cover></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/uploads/realisations/3-2.png"><img uk-img
+                                                                data-src="/uploads/realisations/3-2.png" alt=""
+                                                                uk-cover></a>
+                                                    </li>
+                                                </ul>
+                                                <a class="uk-position-center-left uk-position-small uk-hidden-hover"
+                                                    href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                                                <a class="uk-position-center-right uk-position-small uk-hidden-hover"
+                                                    href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+                                                <ul
+                                                    class="uk-position-bottom-center uk-slideshow-nav uk-dotnav uk-flex-center uk-margin">
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                        <div class="uk-card-body">
+                                            <p>Application plaçant des garages sur une carte, via les API Google Maps.
+                                                Elle permet la recherche, en fonction de la distance, d&#039;un garage
+                                                pour prendre rendez-vous.</p>
+                                        </div>
+                                        <div class="uk-card-footer uk-background-secondary">
+                                            <div class="uk-flex uk-flex-between uk-light">
+                                                <a target="_blank"
+                                                    href="https://www.directparebrise.com/trouver-un-centre"
+                                                    class="uk-button uk-button-small uk-button-secondary ">Découvrir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li data-react="true" data-socketio="true" data-nodejs="true" data-vanillajs="true"
+                                    data-type="game">
+                                    <div class="uk-card uk-card-default uk-animation-slide-right"
+                                        style="animation-delay: 0.33s;">
+                                        <div class="uk-card-header uk-background-secondary">
+                                            <h3 class="uk-card-title uk-text-center uk-text-white">Codenames like</h3>
+                                        </div>
+                                        <div class="uk-card-media-top uk-card-header uk-padding-remove">
+
+                                            <div class="uk-position-relative" tabindex="-1" uk-slideshow>
+                                                <ul class="uk-slideshow-items" uk-lightbox>
+                                                    <li>
+                                                        <a href="/uploads/realisations/1-1.png"><img uk-img
+                                                                data-src="/uploads/realisations/1-1.png" alt=""
+                                                                uk-cover></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/uploads/realisations/1-2.png"><img uk-img
+                                                                data-src="/uploads/realisations/1-2.png" alt=""
+                                                                uk-cover></a>
+                                                    </li>
+                                                </ul>
+                                                <a class="uk-position-center-left uk-position-small uk-hidden-hover"
+                                                    href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                                                <a class="uk-position-center-right uk-position-small uk-hidden-hover"
+                                                    href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+                                                <ul
+                                                    class="uk-position-bottom-center uk-slideshow-nav uk-dotnav uk-flex-center uk-margin">
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                        <div class="uk-card-body">
+                                            <p>Adaptation web du jeu de société Codenames. La partie client est en
+                                                React, et la partie serveur est en NodeJS + Socket IO. Si vous souhaitez
+                                                tester, il faut être 4 !</p>
+                                        </div>
+                                        <div class="uk-card-footer uk-background-secondary">
+                                            <div class="uk-flex uk-flex-between uk-light">
+                                                <a target="_blank" href="http://korogames.online/"
+                                                    class="uk-button uk-button-small uk-button-secondary ">Découvrir</a>
+                                                <a target="_blank"
+                                                    href="https://github.com/benjaminalrt/client-codenames"
+                                                    class="uk-button uk-button-small uk-button-default"><span
+                                                        uk-icon="github" class="uk-margin-small-right"></span>
+                                                    GitHub</a> </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li data-react="true" data-symfony="true" data-php="true" data-type="wysiwyg">
+                                    <div class="uk-card uk-card-default uk-animation-slide-right"
+                                        style="animation-delay: 0.66s;">
+                                        <div class="uk-card-header uk-background-secondary">
+                                            <h3 class="uk-card-title uk-text-center uk-text-white">Création de site</h3>
+                                        </div>
+                                        <div class="uk-card-media-top uk-card-header uk-padding-remove">
+
+                                            <div class="uk-position-relative" tabindex="-1" uk-slideshow>
+                                                <ul class="uk-slideshow-items" uk-lightbox>
+                                                    <li>
+                                                        <a href="/uploads/realisations/4-1.png"><img uk-img
+                                                                data-src="/uploads/realisations/4-1.png" alt=""
+                                                                uk-cover></a>
+                                                    </li>
+                                                </ul>
+                                                <a class="uk-position-center-left uk-position-small uk-hidden-hover"
+                                                    href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                                                <a class="uk-position-center-right uk-position-small uk-hidden-hover"
+                                                    href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+                                                <ul
+                                                    class="uk-position-bottom-center uk-slideshow-nav uk-dotnav uk-flex-center uk-margin">
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                        <div class="uk-card-body">
+                                            <p>Application, connectant une interface client React et un serveur Symfony,
+                                                permettant de personnaliser un site vitrine à partir d&#039;un éditeur
+                                                WYSIWYG.</p>
+                                        </div>
+                                        <div class="uk-card-footer uk-background-secondary">
+                                            <div class="uk-flex uk-flex-between uk-light">
+                                                <a target="_blank"
+                                                    href="https://www.booster-garage.fr/creation-site-cle-en-main/"
+                                                    class="uk-button uk-button-small uk-button-secondary ">Découvrir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li data-react="true" data-symfony="true" data-php="true" data-type="game">
+                                    <div class="uk-card uk-card-default uk-animation-slide-right"
+                                        style="animation-delay: 0.99s;">
+                                        <div class="uk-card-header uk-background-secondary">
+                                            <h3 class="uk-card-title uk-text-center uk-text-white">Quizz Game</h3>
+                                        </div>
+                                        <div class="uk-card-media-top uk-card-header uk-padding-remove">
+
+                                            <div class="uk-position-relative" tabindex="-1" uk-slideshow>
+                                                <ul class="uk-slideshow-items" uk-lightbox>
+                                                    <li>
+                                                        <a href="/uploads/realisations/2-1.png"><img uk-img
+                                                                data-src="/uploads/realisations/2-1.png" alt=""
+                                                                uk-cover></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/uploads/realisations/2-2.png"><img uk-img
+                                                                data-src="/uploads/realisations/2-2.png" alt=""
+                                                                uk-cover></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/uploads/realisations/2-3.png"><img uk-img
+                                                                data-src="/uploads/realisations/2-3.png" alt=""
+                                                                uk-cover></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/uploads/realisations/2-4.png"><img uk-img
+                                                                data-src="/uploads/realisations/2-4.png" alt=""
+                                                                uk-cover></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/uploads/realisations/2-5.png"><img uk-img
+                                                                data-src="/uploads/realisations/2-5.png" alt=""
+                                                                uk-cover></a>
+                                                    </li>
+                                                </ul>
+                                                <a class="uk-position-center-left uk-position-small uk-hidden-hover"
+                                                    href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                                                <a class="uk-position-center-right uk-position-small uk-hidden-hover"
+                                                    href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+                                                <ul
+                                                    class="uk-position-bottom-center uk-slideshow-nav uk-dotnav uk-flex-center uk-margin">
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                        <div class="uk-card-body">
+                                            <p>Quizz développé sur React avec une api Symfony, dans le cadre d&#039;un
+                                                projet à l&#039;IUT de Haguenau. Le contenu des questions est chargé
+                                                d&#039;une API externe publique.</p>
+                                        </div>
+                                        <div class="uk-card-footer uk-background-secondary">
+                                            <div class="uk-flex uk-flex-between uk-light">
+                                                <a target="_blank" href="https://quizz.korogames.online/"
+                                                    class="uk-button uk-button-small uk-button-secondary ">Découvrir</a>
+                                                <a target="_blank" href="https://github.com/benjaminalrt/qwiz"
+                                                    class="uk-button uk-button-small uk-button-default"><span
+                                                        uk-icon="github" class="uk-margin-small-right"></span>
+                                                    GitHub</a> </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li data-react="true" data-php="true" data-type="wysiwyg">
+                                    <div class="uk-card uk-card-default uk-animation-slide-right"
+                                        style="animation-delay: 1.32s;">
+                                        <div class="uk-card-header uk-background-secondary">
+                                            <h3 class="uk-card-title uk-text-center uk-text-white">Éditeur HTML</h3>
+                                        </div>
+                                        <div class="uk-card-media-top uk-card-header uk-padding-remove">
+
+                                            <div class="uk-position-relative" tabindex="-1" uk-slideshow>
+                                                <ul class="uk-slideshow-items" uk-lightbox>
+                                                    <li>
+                                                        <a href="/uploads/realisations/5-1.png"><img uk-img
+                                                                data-src="/uploads/realisations/5-1.png" alt=""
+                                                                uk-cover></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/uploads/realisations/5-2.png"><img uk-img
+                                                                data-src="/uploads/realisations/5-2.png" alt=""
+                                                                uk-cover></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/uploads/realisations/5-3.png"><img uk-img
+                                                                data-src="/uploads/realisations/5-3.png" alt=""
+                                                                uk-cover></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/uploads/realisations/5-4.png"><img uk-img
+                                                                data-src="/uploads/realisations/5-4.png" alt=""
+                                                                uk-cover></a>
+                                                    </li>
+                                                </ul>
+                                                <a class="uk-position-center-left uk-position-small uk-hidden-hover"
+                                                    href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                                                <a class="uk-position-center-right uk-position-small uk-hidden-hover"
+                                                    href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+                                                <ul
+                                                    class="uk-position-bottom-center uk-slideshow-nav uk-dotnav uk-flex-center uk-margin">
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                        <div class="uk-card-body">
+                                            <p>Application WYSIWYG permettant la création de menus, tableaux et
+                                                formulaires HTML. Réalisée avec Laravel et React, dans le cadre
+                                                d&#039;un projet à l&#039;IUT de Haguenau.</p>
+                                        </div>
+                                        <div class="uk-card-footer uk-background-secondary">
+                                            <div class="uk-flex uk-flex-between uk-light">
+                                                <a target="_blank" href="https://jamgati.benjaminalerte.fr/"
+                                                    class="uk-button uk-button-small uk-button-secondary ">Découvrir</a>
+                                                <a target="_blank" href="https://github.com/tinalep/jamgati"
+                                                    class="uk-button uk-button-small uk-button-default"><span
+                                                        uk-icon="github" class="uk-margin-small-right"></span>
+                                                    GitHub</a> </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li data-react="true" data-type="wysiwyg">
+                                    <div class="uk-card uk-card-default uk-animation-slide-right"
+                                        style="animation-delay: 1.65s;">
+                                        <div class="uk-card-header uk-background-secondary">
+                                            <h3 class="uk-card-title uk-text-center uk-text-white">Éditeur de boutons
+                                            </h3>
+                                        </div>
+                                        <div class="uk-card-media-top uk-card-header uk-padding-remove">
+
+                                            <div class="uk-position-relative" tabindex="-1" uk-slideshow>
+                                                <ul class="uk-slideshow-items" uk-lightbox>
+                                                    <li>
+                                                        <a href="/uploads/realisations/6-1.png"><img uk-img
+                                                                data-src="/uploads/realisations/6-1.png" alt=""
+                                                                uk-cover></a>
+                                                    </li>
+                                                </ul>
+                                                <a class="uk-position-center-left uk-position-small uk-hidden-hover"
+                                                    href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                                                <a class="uk-position-center-right uk-position-small uk-hidden-hover"
+                                                    href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+                                                <ul
+                                                    class="uk-position-bottom-center uk-slideshow-nav uk-dotnav uk-flex-center uk-margin">
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                        <div class="uk-card-body">
+                                            <p>Application permettant la création de supports de communication pour des
+                                                garages, via un éditeur WYSIWYG. Réalisé en React JS, avec la librairie
+                                                Canvas JS</p>
+                                        </div>
+                                        <div class="uk-card-footer uk-background-secondary">
+                                            <div class="uk-flex uk-flex-between uk-light">
+                                                <a target="_blank" href="#"
+                                                    class="uk-button uk-button-small uk-button-default uk-disabled uk-text-muted "><span
+                                                        uk-icon="lock"
+                                                        class="uk-margin-small-right"></span>Confidentiel</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </li>
+                <li class="">
+                    <div>
+                        <h2 class="uk-text-center uk-text-left@s">Me contacter</h2>
+                        <p class="uk-text-center uk-text-left@s">Vous pouvez me contacter via ce <b>formulaire</b>, ou
+                            utilisez directement mes <b>informations de contact au-dessus</b>.</p>
+
+
+
+                        <div class="uk-margin-large-top" uk-grid>
+                            <div class="uk-width-1-1">
+                                <form id="contact-form" class="uk-grid-small" action="/contact-form" method="POST"
+                                    uk-grid>
+                                    <legend class="uk-legend uk-text-center uk-text-left@s">Formulaire de contact
+                                    </legend>
+
+                                    <div class="uk-width-1-2">
+                                        <input class="uk-input" required type="text" name="last_name"
+                                            placeholder="Votre nom *">
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <input class="uk-input" required type="text" name="first_name"
+                                            placeholder="Votre prénom *">
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <input class="uk-input" type="text" name="email" placeholder="Votre email">
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <input class="uk-input" type="text" name="phone" placeholder="Votre téléphone">
+                                    </div>
+                                    <div hidden class="uk-width-1-2">
+                                        <input class="uk-input" type="text" name="cellphone"
+                                            placeholder="Votre téléphone portable">
+                                    </div>
+                                    <div class="uk-width-1-1">
+                                        <input class="uk-input" required type="text" name="object"
+                                            placeholder="Objet *">
+                                    </div>
+                                    <div class="uk-width-1-1">
+                                        <textarea class="uk-textarea" required rows="5" name="message"
+                                            placeholder="Votre message *"></textarea>
+                                    </div>
+
+                                    <div class="uk-width-1-2 uk-margin-auto-left">
+                                        <button class="uk-float-right g-recaptcha uk-button uk-button-secondary"
+                                            data-sitekey="6Lcnz9EaAAAAAFamAjx2s-uBQuUOIaRg1A9Et3Jz"
+                                            data-callback='onSubmit' data-action='submit'>Envoyer</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="">
+                    <div>
+                        <h2 class="uk-text-center uk-text-left@s">Intrigué ?</h2>
+                        <p class="uk-text-center uk-text-left@s">Gardez un souvenir de votre passage en téléchargeant
+                            mon CV au format PDF.</p>
+                        <p class="uk-text-center uk-text-left@s"><a target="_blank" href="/uploads/files/cv.pdf"
+                                class="uk-button uk-button-primary">Télécharger mon CV</a></p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <footer class="uk-box-shadow-large">
+        <div class="uk-section uk-section-secondary uk-section-small">
+            <div class="uk-container">
+                <p class="uk-text-center">
+                    Site réalisé par <b>Benjamin Alerte</b> et développé sous <b>Symfony 5</b> et <b>UIkit 3</b>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Page de base https://benjaminalerte.fr/
+        const allP = document.getElementsByTagName('p')
+        for  (var i = allP.length - 1; i >= 0; i--) {
+            allP[i].remove()
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP2 - 3</title>
+</head>
+<body>
+
+
+    <img onclick="scale(event)" src="https://www.demotivateur.fr/images-buzz/106002/Erik-JanLeusink.jpg" alt="">
+    <img onclick="scale(event)" src="https://cdn.pixabay.com/photo/2019/12/08/17/01/rabbit-4681639_960_720.jpg" alt="">
+    
+    <script>
+        function scale(event){
+            let elt = event.target;
+            let imgs = document.getElementsByTagName('img')
+
+            for(img of imgs){
+                if(img == elt){
+                    img.width = img.width * 1.2
+                } else {
+                    img.width = img.width * 0.8
+                }
+            }
+        }
+    </script>
+</body>
+</html>

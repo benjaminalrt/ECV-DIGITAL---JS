@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP2 - 2</title>
+</head>
+<body>
+
+    <ul>
+        <li onclick="toTop(this)">Paris</li>
+        <li onclick="toTop(this)">Marseille</li>
+        <li onclick="toTop(this)">Lyon</li>
+        <li onclick="toTop(this)">Lille</li>
+        <li onclick="toTop(this)">Strasbourg</li>
+    </ul>
+
+    
+    <script>
+        function toTop(element){
+            element.parentNode.prepend(element)
+        } 
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP2 - 5</title>
+</head>
+<body>
+    <img width="100" onmouseover="scale(this)" onmouseout="scale(this, 0)" src="https://www.demotivateur.fr/images-buzz/106002/Erik-JanLeusink.jpg" alt="">
+    <img width="100" onmouseover="scale(this)" onmouseout="scale(this, 0)" src="https://data.planet-puzzles.com/ravensburger.5/ravensburger-15223-mignon-petit-lapin-puzzle-500-pieces.5444-1.jpg" alt="">
+    <img width="100" onmouseover="scale(this)" onmouseout="scale(this, 0)" src="https://cdn.pixabay.com/photo/2019/12/08/17/01/rabbit-4681639_960_720.jpg" alt="">
+
+    
+    <script>
+        function scale(element, mode = 1){
+            let scale = mode ? 3 : 1
+            element.style.transform = 'scale(' + scale + ')'
+        }
+    </script>
+</body>
+</html>
