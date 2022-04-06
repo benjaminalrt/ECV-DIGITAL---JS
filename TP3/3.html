@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 3</title>
+</head>
+<body style="display: flex; flex-direction: column; gap: 15px;">
+    <script>
+
+        let body = document.querySelector('body')
+
+        const config = {
+            minDivs : 5,
+            maxDivs : 15,
+            divHeight : '50px',
+            divWidth : '100%'
+        }
+
+        const numberOfDivs = generateNumberBetween(config.minDivs, config.maxDivs)
+
+        for (let index = 0; index < numberOfDivs; index++) {
+            const element = document.createElement('div')
+            const color = generateRgbaColor()
+
+            element.style.height = config.divHeight
+            element.style.width = config.divWidth,
+            element.style.backgroundColor = color
+
+            element.addEventListener('click', () => {
+                let nextColor
+                if(element.style.backgroundColor == 'red'){
+                    nextColor = color
+                } else {
+                    nextColor = 'red'
+                }
+                element.style.backgroundColor = nextColor
+            })
+
+            body.appendChild(element)
+        }
+
+        function generateNumberBetween(min,max){
+            return Math.floor(Math.random() * (max - min) + min)
+        }
+
+        function generateRgbaColor(){
+            const red = generateNumberBetween(0,255)
+            const green = generateNumberBetween(0,255)
+            const blue = generateNumberBetween(0,255)
+            const opacity = (generateNumberBetween(0,100) / 100)
+            return `rgba(${red},${green},${blue},${opacity})`
+        }
+        
+
+    </script>
+
+</body>
+</html>

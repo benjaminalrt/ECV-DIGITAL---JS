@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 5</title>
+</head>
+<body>
+    <h2>Test 1  :</h2>
+    <p id="input1">kayak</p>
+    <p id="output1"></p>
+
+    <h2>Test 2 :</h2>
+    <p id="input2">hellolastreet</p>
+    <p id="output2"></p>
+
+
+    <script>
+
+        function palindrome(str){
+            console.log(str)
+            return str == revert(str)
+        }
+
+        function revert(str){
+            let revertedText = '';
+
+            for(let i = 0; i < str.length; i++){
+                revertedText += str.substr(-1 * (i + 1), 1)
+            }
+
+            return revertedText
+        }
+
+        document.getElementById('output1').innerText = palindrome(document.getElementById('input1').innerText) ? 'OUI' : 'NON'
+        document.getElementById('output2').innerText = palindrome(document.getElementById('input2').innerText) ? 'OUI' : 'NON'
+
+    </script>
+
+</body>
+</html>

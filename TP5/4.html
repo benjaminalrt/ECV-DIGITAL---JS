@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 4</title>
+</head>
+<body>
+    <h2>Inputs :</h2>
+    <p id="input1">[0,2,4,6,8,8]</p>
+    <p id="input2">[1,2,3,4,5,6]</p>
+
+    <h2>Ouput :</h2>
+    <p id="output"></p>
+
+
+    <script>
+
+         // on garde à chaque fois la première occurrence car indexOf renvoie le premier index correspondant à la recherche
+        arrayDiff = (first,second) => second.filter(word => !first.includes(word)).concat(first.filter(word => !second.includes(word)))
+
+        const tab1 = JSON.parse(document.getElementById('input1').innerText)
+        const tab2 = JSON.parse(document.getElementById('input2').innerText)
+        document.getElementById('output').innerText = JSON.stringify(arrayDiff(tab1,tab2))
+
+    </script>
+
+</body>
+</html>

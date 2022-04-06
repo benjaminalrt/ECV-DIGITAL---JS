@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 2</title>
+</head>
+<body>
+    <h2>Input :</h2>
+    <p id="input">[0,2,4,6,8,8]</p>
+
+    <h2>Ouput :</h2>
+    <p id="output"></p>
+
+
+    <script>
+
+         // on garde à chaque fois la première occurrence car indexOf renvoie le premier index correspondant à la recherche
+        removeDuplicate = (tab) => tab.filter((word,index) => tab.indexOf(word) == index)
+
+        document.getElementById('output').innerText = JSON.stringify(removeDuplicate(JSON.parse(document.getElementById('input').innerText)))
+
+    </script>
+
+</body>
+</html>

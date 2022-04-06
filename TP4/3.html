@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 3</title>
+</head>
+<body>
+    <h2>Input :</h2>
+    <p id="input">hello i'm robert</p>
+
+    <h2>Ouput :</h2>
+    <p id="output"></p>
+
+
+    <script>
+
+        function capitalize(str){
+            let capitalizedText = ''
+            let nextShouldBeUpper = true //booléen qui devient true après chaque espace
+            for(let i = 0; i < str.length; i++){
+                let nextLetter = str[i]
+                if(nextShouldBeUpper){
+                    nextShouldBeUpper = false
+                    nextLetter = nextLetter.toUpperCase();
+                }
+                if(nextLetter == ' '){
+                    nextShouldBeUpper = true
+                }
+                capitalizedText += nextLetter
+            }
+
+            return capitalizedText
+        }
+
+        document.getElementById('output').innerText = capitalize(document.getElementById('input').innerText)
+
+    </script>
+
+</body>
+</html>

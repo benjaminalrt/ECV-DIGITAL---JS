@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 1</title>
+</head>
+<body>
+    <h2>Input :</h2>
+    <p id="input">How the Avocado Became the Fruit of the Global Trade</p>
+
+    <h2>Ouput :</h2>
+    <p id="output"></p>
+
+
+    <script>
+
+        getHashTags = (str) => str.split(' ').sort((str1,str2) => str2.length - str1.length).slice(0,3).map(word => '#'+word)
+
+        document.getElementById('output').innerText = JSON.stringify(getHashTags(document.getElementById('input').innerText))
+
+    </script>
+
+</body>
+</html>
