@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP</title>
+</head>
+<body>
+    
+
+    <script>
+
+        // GLOBAL
+
+        
+        const printSuccess = (val) => {
+            console.log(val)
+        }
+        
+        const printError = (val) => {
+            console.log(val)
+        }
+
+        // Q1
+
+        const check20 = (text) => {
+            return new Promise((resolve, reject) => {
+
+                if(text.length > 20){
+                    resolve(true)
+                } else {
+                    reject(`Erreur - Q1 - ${text}`)
+                }
+            })
+        }
+
+        
+        
+        const test1 = '123', test2 = '123456789123456789123456789'
+        check20(test1).then(printSuccess, printError)
+        check20(test2).then(printSuccess, printError)
+
+        // Q2
+
+        const compare = (int1, int2) => {
+            return new Promise((resolve, reject) => {
+
+                if(int1 > int2){
+                    resolve(int1 - int2)
+                } else {
+                    reject(`Erreur - Q2 - ${int1}/${int2}`)
+                }
+            })
+        }
+
+        const int1 = 50, int2 = 25
+        compare(int1, int2).then(printSuccess, printError)
+        compare(int2, int1).then(printSuccess, printError)
+
+        // Q3
+
+        const checkMineur = (dob) => {
+            return new Promise((resolve, reject) => {
+                const formatedDate = new Date(dob.split('/').reverse().join('-'))
+                const now = new Date()
+                
+                let age = now.getFullYear() - formatedDate.getFullYear() - 1 // age sans check le birthdate
+                if(now.getMonth() == formatedDate.getMonth()){
+                    if(now.getDay() <= formatedDate.getDay()){
+                        age ++
+                    }
+                } else if(now.getMonth() > formatedDate.getMonth()){
+                    age ++
+                }
+
+
+
+                if(age >= 18){
+                    resolve(true)
+                } else {
+                    reject(`Erreur - Q2 - ${dob}`)
+                }
+            })
+        }
+
+        const dob1 = '25/10/1996'
+        const dob2 = '25/10/2004'
+        const dob3 = '25/01/2004'
+        checkMineur(dob1).then(printSuccess, printError)
+        checkMineur(dob2).then(printSuccess, printError)
+        checkMineur(dob3).then(printSuccess, printError)
+
+        // Q4
+        check20(test1).then(res => printSuccess(res)).catch(err => printError(err))
+        check20(test2).then(res => printSuccess(res)).catch(err => printError(err))
+        
+        compare(int1, int2).then(res => printSuccess(res)).catch(err => printError(err))
+        compare(int2, int1).then(res => printSuccess(res)).catch(err => printError(err))
+
+        checkMineur(dob1).then(res => printSuccess(res)).catch(err => printError(err));
+        checkMineur(dob2).then(res => printSuccess(res)).catch(err => printError(err));
+        checkMineur(dob3).then(res => printSuccess(res)).catch(err => printError(err));
+        
+        // Q5
+
+        // test q1
+        (async () => {
+            try{
+                await check20(test1).then(res => printSuccess(res))
+            } catch(err) {
+                printError(err)
+            }
+        })();
+        (async () => {
+            try{
+                await check20(test2).then(res => printSuccess(res))
+            } catch(err) {
+                printError(err)
+            }
+        })();
+
+        // test q2
+        (async () => {
+            try{
+                await compare(int1,int2).then(res => printSuccess(res))
+            } catch(err) {
+                printError(err)
+            }
+        })();
+        (async () => {
+            try{
+                await compare(int2,int1).then(res => printSuccess(res))
+            } catch(err) {
+                printError(err)
+            }
+        })();
+
+        // test q3
+        (async () => {
+            try{
+                await checkMineur(dob1).then(res => printSuccess(res))
+            } catch(err) {
+                printError(err)
+            }
+        })();
+        (async () => {
+            try{
+                await checkMineur(dob2).then(res => printSuccess(res))
+            } catch(err) {
+                printError(err)
+            }
+        })();
+        (async () => {
+            try{
+                await checkMineur(dob3).then(res => printSuccess(res))
+            } catch(err) {
+                printError(err)
+            }
+        })();
+
+        // Q6
+
+        const baseUrl = 'https://swapi.dev/api'
+
+        // Fonction qui se charge de fetch swapi + un endpoint et retourne une promesse avec les resultats si ok, la réponse sinon
+        const getDatas = async (endpoint) => {
+            const url = `${baseUrl}/${endpoint}`
+            const response = await fetch(url)
+            return new Promise((resolve, reject) => {
+                if(response.ok){
+                    resolve(response.json())
+                } else {
+                    reject(`Erreur : code d'erreur ${response.status} avec l'url ${url}`)
+                }
+            })
+        }
+
+        // Nos trois fonctions voulues + 1 fake pour tester un 404
+        const getPlanets = async () => getDatas('planets');
+        const getPeople = async () => getDatas('people');
+        const getStarships = async () => getDatas('starships');
+        const getBettyBoop = async () => getDatas('bettyboop');
+
+        // Fonction qui va print nos listes d'informations (uniquement la clé name) dans des ul avec un titre
+        const printDatasToList = ({results}, title) => {
+            const body = document.querySelector('body')
+            const ul = document.createElement('ul')
+            const h1 = document.createElement('h2')
+            h1.innerText = title
+            results.forEach(result => {
+                const { name } = result
+                const li = document.createElement('li')
+                li.innerText = name
+                ul.appendChild(li)
+            })
+            body.appendChild(h1)
+            body.appendChild(ul)
+
+        }
+
+        // Nos fonctions anonymes auto exécutées
+        (async () => {
+            try{
+                await getPlanets().then(res => printDatasToList(res, 'Liste des planètes'))
+            } catch(err) {
+                printError(err)
+            }
+        })();
+        (async () => {
+            try{
+                await getPeople().then(res => printDatasToList(res, 'Liste des personnages'))
+            } catch(err) {
+                printError(err)
+            }
+        })();
+        (async () => {
+            try{
+                await getStarships().then(res => printDatasToList(res, 'Liste des vaisseaux'))
+            } catch(err) {
+                printError(err)
+            }
+        })();
+        (async () => {
+            try{
+                await getBettyBoop().then(res => printDatasToList(res, 'BettyBoop INC'))
+            } catch(err) {
+                printError(err)
+            }
+        })();
+
+
+
+    </script>
+
+</body>
+</html>
