@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 1</title>
+</head>
+<body>
+
+    <script>
+
+        const matt = {
+            name : "Matt",
+            surname : "Edabit",
+            gender : "M",
+            dob : "1/1/1900"
+        }
+
+        const helen = {
+            name : "Helen",
+            surname : "Yu",
+            gender : "F",
+            dob : "1/12/1950"
+        }
+
+        const mickey = {
+            name : "Mickey",
+            surname : "Mouse",
+            gender : "M",
+            dob : "16/1/1928"
+        }   
+
+        const vowels = ['A','E','I','O','U']
+
+        const month2code = {
+            1 : 'A',
+            2 : 'B',
+            3 : 'C',
+            4 : 'D',
+            5 : 'E',
+            6 : 'H',
+            7 : 'L',
+            8 : 'M',
+            9 : 'P',
+            10 : 'R',
+            11 : 'S',
+            12 : 'T'
+        }
+
+        fiscalCode = (person) => {
+            let fiscalCode = '';
+
+            /* CODE NOM DE FAMILLE */
+
+            // Récupérer les 3 premières consonnes
+            let surnameCode = '';
+
+            const surname = person.surname.toUpperCase()
+            if(surname.length < 3){
+                surnameCode = surname.split('').concat(['X','X','X'])
+            } else {
+                surnameCode = surname.split('').filter(letter => !vowels.includes(letter))
+                if(surnameCode.length < 3){
+                    const personVowels = surname.split('').filter(letter => vowels.includes(letter))
+                    surnameCode = surnameCode.concat(personVowels)
+                }
+            }
+            surnameCode = surnameCode.slice(0,3).join('')
+
+             /* CODE PRÉNOM */
+
+            // Récupérer les 3 premières consonnes
+            let nameCode = '';
+
+            const name = person.name.toUpperCase()
+            const consonants = name.split('').filter(letter => !vowels.includes(letter))
+            if(consonants.length == 3){
+                nameCode = consonants.join('')
+            } else if(consonants.length > 3) {
+                nameCode = consonants[0] + consonants[2] + consonants[3]
+            } else {
+                const personVowels = name.split('').filter(letter => vowels.includes(letter))
+                nameCode = consonants.concat(personVowels)
+                if(nameCode.length < 3){
+                    nameCode = nameCode.concat(['X','X','X'])
+                }
+                nameCode = nameCode.slice(0,3).join('')
+            }
+
+            /* CODE NAISSANCE */
+            let birthCode = '';
+
+            birthCode += person.dob.substr(-2,2) // année
+
+            const month = person.dob.split('/')[1]
+            birthCode += month2code[month]
+
+            const day = person.dob.split('/')[0]
+
+            if(person.gender == 'M'){
+                birthCode += day < 10 ? '0' + day : day
+            } else {
+                birthCode += parseInt(day) + 40
+            }
+
+            fiscalCode = surnameCode + nameCode + birthCode
+
+            return fiscalCode
+        }
+
+
+        console.log({
+            matt : fiscalCode(matt),
+            helen : fiscalCode(helen),
+            mickey : fiscalCode(mickey)
+        })
+
+
+
+    </script>
+
+</body>
+</html>
