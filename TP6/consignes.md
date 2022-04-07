@@ -34,3 +34,8 @@ Septembre = P
 Octobre = R
 Novembre = S
 Décembre = T
+
+
+2. Écrire une fonction prop_access(object, path) qui prend en paramètre un chemin et un objet et retourne la valeur associée.
+Si l’attribut n'existe pas alors retourné le chemin + “not exist” ( ex: “post.comments.type not exist”
+Si le chemin est vide Renvoyez l’objet complet.

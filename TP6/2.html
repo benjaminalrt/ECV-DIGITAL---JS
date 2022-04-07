@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 2</title>
+</head>
+<body>
+
+    <script>
+
+        prop_access = (object, path = '') => {
+            
+            if(path.length){
+
+                let properties = path.split('.')
+
+                let value = object;
+                let stop = false;
+
+                properties.forEach( property  => {
+
+                    if(!stop){
+
+                        if(value.hasOwnProperty(property)){
+                            value = value[property]
+                        } else {
+                            value = null
+                            stop = true
+                        }
+
+                    }
+
+                })
+
+                if(value == null){
+                    return path + " not exist"
+                } else {
+                    return value
+                }
+
+
+            } else {
+                return object
+            }
+
+        }
+
+
+        let webPage = {
+            head : {
+                style : '<style></style>'
+            },
+            body : {
+                main : {
+                    div1 : '<div></div>',
+                    div2 : '<div></div>',
+                    div3 : {
+                        p1 : '<p></p>',
+                        p2 : '<p></p>'
+                    },
+                }
+            }
+        }
+
+        console.log(prop_access(webPage, 'body.main.div1'))
+
+
+    </script>
+
+</body>
+</html>
